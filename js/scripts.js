@@ -13,8 +13,10 @@ $(document).ready(function() {
   $("form#factorial-numbers").submit(function(event) {
     event.preventDefault();
     var factorialNumber = parseInt($("input#factorial").val());
+    var finalNumber = factorialize(factorialNumber);
+
+    $(".factor").text(finalNumber);
+    $("#result").show();
 
   });
 });
-
-alert("The total is:" + total);
