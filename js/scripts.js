@@ -1,8 +1,20 @@
-var total = 0;
-var numbers = [5, 4, 3, 2, 1];
-var factorialNumbers = numbers.map(function(number){
-  return number * 2;
+function factorialize(num) {
+  if (num === 0 || num === 1)
+    return 1;
+  for (var i = num - 1; i >= 1; i--) {
+    num *= i;
+  }
+  return num;
+};
 
+
+
+$(document).ready(function() {
+  $("form#factorial-numbers").submit(function(event) {
+    event.preventDefault();
+    var factorialNumber = parseInt($("input#factorial").val());
+
+  });
 });
 
-  alert(factorialNumbers);
+alert("The total is:" + total);
